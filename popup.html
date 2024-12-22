@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram.exe</title>
+    <link rel="stylesheet" href="https://unpkg.com/98.css">
+    <style>
+        body {
+            font-family: 'Tahoma', sans-serif;
+            background-color:#008080;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .window {
+            width: 800px;
+            margin: 0 auto;
+        }
+
+        .content {
+            background-color:  #c0c0c0;
+            padding: 20px;
+        }
+
+        .profile {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .profile img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 2px solid black;
+        }
+
+        .profile-info {
+            font-size: 18px;
+        }
+
+        .stats {
+            margin-top: 10px;
+            font-size: 16px;
+        }
+
+        .bio {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .grid img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border: 2px solid black;
+            cursor: pointer;
+        }
+
+        .toolbar {
+            display: flex;
+            justify-content: space-between;
+            background-color:  #c0c0c0;
+            padding: 10px;
+            border: 2px solid black;
+        }
+
+        .toolbar button {
+            width: 40px;
+            height: 40px;
+            border: 2px solid black;
+            background-color: #c0c0c0;
+        }
+
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }.popup-content {
+            display: flex;
+            flex-direction: column;
+            background-color: #fff;
+            width: 70%;
+            max-width: 800px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        .popup-header {
+            display: flex;
+            justify-content: flex-end;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .popup-header button {
+            background: none;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .popup-body {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .popup-image {
+            width: 50%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .popup-details {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            gap: 10px;
+        }
+
+        .popup-username {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .popup-description {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #333;
+        }
+
+        .title-bar {
+            height: 30px;
+            padding: 0 10px;
+            font-size: 16px;
+        }
+
+        .title-bar-text {
+            line-height: 40px;
+        }
+
+        .title-bar-controls button {
+            border: none;
+            cursor: pointer;
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="window">
+        <div class="title-bar">
+            <div class="title-bar-text">Instagram.exe</div>
+            <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Maximize"></button>
+                <button aria-label="Close" onclick="goToIndex()"></button>
+            </div>
+        </div>
+        <div class="content">
+            <div class="profile">
+                <img src="image/smile.png" alt="Profile Picture">
+                <div>
+                    <div class="profile-info">
+                        <strong>dingdingthem0_0</strong><br>
+                        그시절 추억 저장소
+                    </div>
+                    <div class="stats">
+                        게시물 17 • 팔로워 2.7 • 팔로잉 28
+                    </div>
+                    <div class="bio">
+                        0ne_t2raser님, 0_0aaaaa_0.0님 외 20명이 팔로우합니다
+                    </div>
+                </div>
+            </div>
+            <div class="toolbar">
+                <button>📷</button>
+                <button>🔖</button>
+                <button>⚙️</button>
+            </div>
+            <div class="grid">
+                <img src="insta/image1.jpg" alt="Image 1" onclick="openPopup('달고나', '학교 앞에서 팔던 달고나. 바늘로 모양을 뽑으면 하나 더!')">
+                <img src="insta/image2.jpg" alt="Image 2" onclick="openPopup('리듬스타', '폴더폰 숫자로 하던 리듬게임! 9키를 사용하면 고수였다는...')">
+                <img src="insta/image3.jpg" alt="Image 3" onclick="openPopup('쥬니어네이버', '아이들의 천국이었던 쥬니어 네이버. 게임뭉치, 동물농장도 매우 유명했다.')">
+                <img src="insta/image4.png" alt="Image 4" onclick="openPopup('배터리교체', '예전에는 배터리 교체가 가능해서 보조배터리가 필요없었다.')">
+                <img src="insta/image5.jpg" alt="Image 5" onclick="openPopup('병아리', '학교 앞에서 팔던 병아리. 한 마리에 500원! 닭으로 될 때까지 키우기도 한다는 소문이...')">
+                <img src="insta/image6.png" alt="Image 6" onclick="openPopup('닌텐도 DS', '친구들이랑 항상 모여하던 닌텐도. R4칩, tt칩도 알고 있다면 닌텐도 고수!')">
+                <img src="insta/image7.png" alt="Image 7" onclick="openPopup('슬라이드폰', '엄청 흔했던 슬라이드폰. 전화번호도 011, 017, 019가 있었다고..')">
+                <img src="insta/image8.jpg" alt="Image 8" onclick="openPopup('감자도리', '당시 유행했던 플래시 만화. 학교에서 모두가 따라 부르고 있었던 노래!')">
+                <img src="insta/image9.jpg" alt="Image 9" onclick="openPopup('피카츄 돈까스', '학교 앞에서 팔던 피카츄 돈까스. 달달한 양념을 가득 발라주는데 단돈 500원!')">
+                <img src="insta/image10.jpg" alt="Image 10" onclick="openPopup('화약총', '학교 앞 문방구에서 팔던 화약총. 어려웠던 그 시절 어린이...')">
+                <img src="insta/image11.jpg" alt="Image 11" onclick="openPopup('문 타고 오르기', '만국공통 어린이들의 필수 행동! 문 타고 올라가기만큼 쉬운건 없었다..')">
+                <img src="insta/image12.jpg" alt="Image 12" onclick="openPopup('구슬보배', '학교 앞 문방구에서 팔던 불량식품. 가루가 잔뜩 묻은 껌은 정말 환상!')">
+                <img src="insta/image13.jpg" alt="Image 13" onclick="openPopup('장롱에 몰래 들어가기', '어릴때 누가 알려주지 않아도 맨날 들어가있던 아늑한 아지트..!')">
+            </div>
+        </div>
+    </div>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <div class="popup-header">
+                <button onclick="closePopup()">&times;</button>
+            </div>
+            <div class="popup-body">
+                <img id="popup-image" class="popup-image" src="" alt="Popup Image">
+                <div class="popup-details">
+                    <div class="popup-username"><strong>dingdingthem0_0</strong></div>
+                    <div id="popup-description" class="popup-description"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function goToIndex() {
+            window.location.href = 'index.html';
+        }
+        function openPopup(imageTitle, description) {
+            const popup = document.getElementById('popup');
+            const popupImage = document.getElementById('popup-image');
+            const popupDescription = document.getElementById('popup-description');
+
+            popupImage.src = event.target.src;
+            popupDescription.textContent = description;
+
+            popup.style.display = 'flex';
+        }
+
+        function closePopup() {
+            const popup = document.getElementById('popup');
+            popup.style.display = 'none';
+        }
+    </script>
+</body>
+</html>

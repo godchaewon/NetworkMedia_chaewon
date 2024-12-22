@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Retro Window 98</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<form id="windows">
+    <!-- Login and Shutdown -->
+    <input type="checkbox" id="login-screen-input" name="login-screen-input" />
+    <input type="checkbox" id="shutdown-screen-input" name="shutdown-screen-input" />
+    <input type="checkbox" name="start-button-input" id="start-button-input" />
+    <input type="radio" name="update-input" id="update-input" />
+    <div id="background"></div>
+    <!-- Minimize Windows -->
+    <input type="checkbox" id="windows-ie-input-min" name="windows-ie-input-min" />
+    <input type="checkbox" id="windows-documents-input-min" name="windows-documents-input-min" />
+    <input type="checkbox" id="windows-help-input-min" name="windows-help-input-min" /> 
+    <input type="checkbox" id="windows-update-input-min" name="windows-update-input-min" />
+    <input type="checkbox" id="windows-notepad-input-min" name="windows-notepad-min" /> 
+    <input type="checkbox" id="windows-minesweeper-input-min" name="windows-minesweeper-input-min" /> 
+    <input type="checkbox" id="windows-trash-input-min" name="windows-trash-input-min" />
+    <!-- Maximize Windows -->
+    <input type="checkbox" id="windows-ie-input-max" name="windows-ie-input-max" />
+    <input type="checkbox" id="windows-documents-input-max" name="windows-documents-input-max" />
+    <input type="checkbox" id="windows-help-input-max" name="windows-help-input-max" /> 
+    <input type="checkbox" id="windows-update-input-max" name="windows-update-input-max" /> 
+    <input type="checkbox" id="windows-notepad-input-max" name="windows-notepad-max" /> 
+    <input type="checkbox" id="windows-minesweeper-input-max" name="windows-minesweeper-input-max" />
+    <input type="checkbox" id="windows-trash-input-max" name="windows-trash-input-max" />
+    <!-- Window Order -->
+    <input type="radio" id="windows-ie-input-on-top" name="windows-order" /> 
+    <input type="radio" id="windows-documents-input-on-top" name="windows-order" />
+    <input type="radio" id="windows-help-input-on-top" name="windows-order" /> 
+    <input type="radio" id="windows-update-input-on-top" name="windows-order" /> 
+    <input type="radio" id="windows-notepad-input-on-top" name="windows-order" />
+    <input type="radio" id="windows-minesweeper-input-on-top" name="windows-order" /> 
+    <input type="radio" id="windows-trash-input-on-top" name="windows-order" />
+    <!-- Window Visibility -->
+    <input type="checkbox" id="windows-ie-input" name="windows-ie-input" />
+    <input type="checkbox" id="windows-documents-input" name="windows-documents-input" />
+    <input type="checkbox" id="windows-help-input" name="windows-help-input" /> 
+    <input type="checkbox" id="windows-update-input" name="windows-update-input" /> 
+    <input type="checkbox" id="windows-notepad-input" name="windows-notepad-input" />
+    <input type="checkbox" id="windows-minesweeper-input" name="windows-minesweeper-input" />
+    <input type="checkbox" id="windows-trash-input" name="windows-trash-input" />
+
+    <div id="shutdown-screen"><label for="shutdown-screen-input"></div></div>
+    <div id="login-screen">
+        <div id="login-window" class="window windows-box-shadow">
+            <div class="header">Enter Password</div>
+            <div class="content">
+                <img src="image/window.png" alt="Windows" />
+                <div class="select-box inverse-windows-box-shadow">
+                    <input type="radio" name="users" id="chaewon" checked />
+                    <input type="radio" name="users" id="donald-trump" />
+                    <input type="radio" name="users" id="spiderman" />
+                    <label for="chaewon" id="chaewon-label" />chaewon</label>
+                    <label for="donald-trump" id="donald-trump-label" />Donald Trump</label>
+                    <label for="spiderman" id="spiderman-label" />Spiderman</label>
+                </div>
+                <input type="password" class="margin-input inverse-windows-box-shadow" />
+                <div class="ok-cancel">
+                    <label for="login-screen-input" class="windows-box-shadow">OK</label>
+                    <label for="login-screen-input" class="windows-box-shadow">Cancel</label>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <div id="desktop">
+        <label for="windows-ie-input" class="desktop-item">
+            <div class="icon"><img src="image/internet.png" alt="" /></div>
+            <div class="text">Internet Explorer</div>
+        </label>
+        <label for="windows-documents-input" class="desktop-item">
+            <div class="icon"><img src="image/document.png" alt="" /> </div>
+            <div class="text">Documents</div>
+        </label>
+        <label for="windows-notepad-input" class="desktop-item">
+            <div class="icon"><img src="image/notepad.png" alt="" /> </div>
+            <div class="text">Notepad</div>
+        </label>
+        <label for="windows-minesweeper-input" class="desktop-item">
+            <div class="icon"><img src="image/minesweeper.png" alt="" /> </div>
+            <div class="text">Minesweeper</div>
+        </label>
+        <label for="windows-update-input" class="desktop-item update">
+            <div class="icon"><img src="image/windowupdate.png" alt="" /> </div>
+            <div class="text">Update Windows</div>
+        </label>
+        <label for="windows-trash-input" class="desktop-item">
+            <div class="icon"><img src="image/trash.png" alt="" /> </div>
+            <div class="text">Recycle Bin</div>
+        </label>
+        <a target="_blank" href="popup.html" class="desktop-item"><span class="icon"><img src="image/instagram.png" alt="" /></span><span class="text">Instagram</span></a>
+    </div>
+    <div id="all-windows">
+        <div class="window ie windows-box-shadow">
+            <div class="header"><label for="windows-ie-input-on-top">추억</label>
+                <div class="header-buttons">
+                    <label for="windows-ie-input-min" class="minimize windows-box-shadow"></label>
+                    <label for="windows-ie-input-max" class="maximize windows-box-shadow"></label>
+                    <label for="windows-ie-input" class="close windows-box-shadow">X</label>
+                </div>
+            </div>
+            <div class="options line">
+                <div class="item">File</div>
+                <div class="item">Edit</div>
+                <div class="item">Views</div>
+                <div class="item">Favorites</div>
+                <div class="item">Tools</div>
+                <div class="item">Help</div>
+                <div class="item float-right"><img src="image/logo.png" alt="" /></div>
+            </div>
+            <div class="options padding">
+                <div class="item">Address</div>
+                <input type="text" class="inverse-windows-box-shadow" value="https://namu.wiki/w/추억" />
+            </div>
+            <div class="content">
+                <iframe src="https://namu.wiki/w/추억"></iframe>
+            </div>
+        </div>
+        <div class="window help windows-box-shadow">
+            <div class="header"><label for="windows-help-input-on-top">Windows Help</label>
+                <div class="header-buttons">
+                    <label for="windows-help-input-min" class="minimize windows-box-shadow"></label>
+                    <label for="windows-help-input-max" class="maximize windows-box-shadow"></label>
+                    <label for="windows-help-input" class="close windows-box-shadow">X</label>
+                </div>
+            </div>
+            <div class="options padding">
+                <div class="item">Location</div>
+                <input type="text" class="inverse-windows-box-shadow" value="General Help" />
+            </div>
+            <div class="tab-box-content">
+                <input name="topics-radio" id="topic-1" type="radio" checked />
+                <input name="topics-radio" id="topic-2" type="radio" />
+                <input name="topics-radio" id="topic-3" type="radio" />
+                <input name="topics-radio" id="topic-4" type="radio" />
+                <div class="tab-box">
+                    <div class="tab-header">CSS Windows</div>
+                    <ul class="box">
+                        <li><label for="topic-1"><img src="image/help.png" alt="" /> Why did create this project?</label></li>
+                        <li><label for="topic-2"><img src="image/help.png" alt="" /> Why use the computer theme?</label></li>
+                        <li><label for="topic-3"><img src="image/help.png" alt="" /> What does each folder mean?</label></li>
+                        <li><label for="topic-4"><img src="image/help.png" alt="" /> What is the content of Instagram?</label></li>
+                    </ul>
+                </div>
+                <div class="content">
+                    <div class="topic-1-content">
+                        <h2>Why did create this project?</h2>
+                        <p>The primary goal is not only to access the website using a self-made 8-inch Raspberry Pi computer but also to provide a fun experience for people visiting the website from regular computers.</p>
+                    </div>
+                    <div class="topic-2-content">
+                        <h2>Why use the computer theme?</h2>
+                        <p>The computer is often likened to the human mind. The content displayed on a computer can serve as a medium to showcase the creator's thoughts. By utilizing the accessible nature of computers, I aim to offer a new experience that allows for the effortless sharing of ideas with others.</p>
+                    </div>
+                    <div class="topic-3-content">
+                        <h2>What does each folder mean?</h2>
+                        <p><strong>document</strong>represents the current producer's thoughts. It can be seen that the producer was struggling with the test period and was immersed in coding for network media projects. 
+                            <strong>recycle bin</strong>shows things that have disappeared in the past. Things that you can no longer see now are thrown into the recycle bin.</p>
+                    </div>
+                    <div class="topic-4-content">
+                        <h2>What is the content of Instagram?</h2>
+                        <p>The feed was curated with content designed to evoke pleasant memories, making it more enjoyable for people to reminisce about their past experiences.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="window update windows-box-shadow">
+            <div class="header"><label for="windows-update-input-on-top">Microsoft Windows Update</label>
+                <div class="header-buttons">
+                    <label for="windows-update-input-min" class="minimize windows-box-shadow"></label>
+                    <label for="windows-update-input-max" class="maximize windows-box-shadow"></label>
+                    <label for="windows-update-input" class="close windows-box-shadow">X</label>
+                </div>
+            </div>
+            <div class="content">
+                <img src="image/update.gif" alt="" />                
+                <div class="title">Install progress</div>
+                <div id="install-bar">
+                    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                </div>
+                <div class="ok-cancel">
+                    <label for="windows-update-input" class="windows-box-shadow"></label>
+                </div>
+            </div>
+        </div>
+        <div class="window update-successful windows-box-shadow">
+            <div class="header">Microsoft Windows Updated!
+            </div>
+            <div class="content">
+                Your copy of Microsoft Windows has been updated successfully. Click "OK" to confirm your update.
+                <div class="ok-cancel">
+                    <label for="update-input" class="windows-box-shadow">OK</label>
+                </div>
+            </div>
+        </div>
+        <div class="window trash windows-box-shadow">
+            <div class="header"><label for="windows-trash-input-on-top">Recycle Bin</label>
+                <div class="header-buttons">
+                    <label for="windows-trash-input-min" class="minimize windows-box-shadow"></label>
+                    <label for="windows-trash-input-max" class="maximize windows-box-shadow"></label>
+                    <label for="windows-trash-input" class="close windows-box-shadow">X</label>
+                </div>
+            </div>
+            <div class="options line">
+                <div class="item">File</div>
+                <div class="item">Edit</div>
+                <div class="item">Views</div>
+                <div class="item">Go</div>
+                <div class="item">Favourites</div>
+                <div class="item">Help</div>
+            </div>
+            <div class="content white">
+                <input type="radio" name="trash-radio" id="windows-11" />
+                <input type="radio" name="trash-radio" id="macos" />
+                <input type="radio" name="trash-radio" id="yahoo" />
+                <input type="radio" name="trash-radio" id="phone" />
+                <input type="radio" name="trash-radio" id="home" />
+                <label class="file windows-11" for="windows-11">
+                    <span class="image"><img src="image/game.png" alt="" /></span>
+                    <span class="text">문방구 앞 게임기.exe</span>
+                </label>
+                <label class="file macos" for="macos">
+                    <span class="image"><img src="image/sat.png" alt="" /></span>
+                    <span class="text">노는 토요일.exe</span>
+                </label>
+                <label class="file yahoo" for="yahoo">
+                    <span class="image"><img src="image/yahoo.png" alt="" /></span>
+                    <span class="text">Yahoo!kor.exe</span>
+                </label>
+                <label class="file phone" for="phone">
+                    <span class="image"><img src="image/phone.png" alt="" /></span>
+                    <span class="text">알충전.exe</span>
+                </label>
+                <label class="file home" for="home">
+                    <span class="image"><img src="image/home.png" alt="" /></span>
+                    <span class="text">유선 집전화기.exe</span>
+                </label>
+            </div>
+        </div>
+        <div class="window documents windows-box-shadow">
+            <div class="header"><label for="windows-documents-input-on-top">Documents</label>
+                <div class="header-buttons">
+                    <label for="windows-documents-input-min" class="minimize windows-box-shadow"></label>
+                    <label for="windows-documents-input-max" class="maximize windows-box-shadow"></label>
+                    <label for="windows-documents-input" class="close windows-box-shadow">X</label>
+                </div>
+            </div>
+            <div class="options line">
+                <div class="item">File</div>
+                <div class="item">Edit</div>
+                <div class="item">Views</div>
+                <div class="item">Go</div>
+                <div class="item">Favourites</div>
+                <div class="item">Help</div>
+            </div>
+            <div class="content white">
+                <input type="radio" name="documents-radio" id="secret-codes" />
+                <input type="radio" name="documents-radio" id="diary" />
+                <label class="file secret-codes" for="secret-codes">
+                    <span class="image"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQAAADZc7J/AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfiBhoALTAhTzgxAAAAhUlEQVRIx+1TQQ6AIAwrxIfxtD2Nn9WDOCCKmXAQjT0MQrOmHQDsIGiuBfy2CAmxV9YiEJIgjVUIRpXwGIQK0FzDucCwg14seeuK43rIDkwsrwSOZMm0WJMDYwR7U4mX3MLcM2hEaKHzIf0OZnfwgb/wvIPhISbfwmBuCYgI2pmD30ugfSuWrXYCzH4wigAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAxOC0wNi0yNlQwMDo0NTo0OC0wNDowMGElB+4AAAAldEVYdGRhdGU6bW9kaWZ5ADIwMTgtMDYtMjZUMDA6NDU6NDgtMDQ6MDAQeL9SAAAAAElFTkSuQmCC" alt="" /></span>
+                    <span class="text">넷미코드 모음집.txt</span>
+                </label>
+                <label class="file diary" for="diary">
+                    <span class="image"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAGFBMVEUAAAAAAACAgID////AwMAAAL8AAP///wCsLlssAAAAAXRSTlMAQObYZgAAAAFiS0dEAxEMTPIAAAAHdElNRQfiBhoAOCQMIApYAAAAvUlEQVQoz22Ryw7CIBREqYl7xlb3Pj7APpQ1iaZbXcjaxBTXhCi/bx+2XBomd8PJDDcMjCUc43DWab8rpunIIi/TcbYyCkovKdltBpbPGVAtuHjJqz6GDvUOI1d9DiPqpcMt6tsEkXyjwy04NWEkhWooEMD6wUnEGuBOHidEBXACrKsNuuf/A7Wr3AekD2trB1JQe4MzUvqIK4BMeofIV0OFIzBpOYG+qmxoLNJ6DNCSow528I6s//4EXu3xB1FNX4O6vHKSAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE4LTA2LTI2VDAwOjU2OjM2LTA0OjAwEWYRaQAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxOC0wNi0yNlQwMDo1NjozNi0wNDowMGA7qdUAAAAASUVORK5CYII=" alt="" /></span>
+                    <span class="text">자퇴서.txt</span>
+                </label>
+            </div>
+        </div>
+        <div class="window notepad windows-box-shadow">
+            <div class="header"><label for="windows-notepad-input-on-top">Notepad</label>
+                <div class="header-buttons">
+                    <label for="windows-notepad-input-min" class="minimize windows-box-shadow"></label>
+                    <label for="windows-notepad-input-max" class="maximize windows-box-shadow"></label>
+                    <label for="windows-notepad-input" class="close windows-box-shadow">X</label>
+                </div>
+            </div>
+            <div class="options line">
+                <div class="item">File</div>
+                <div class="item">Edit</div>
+                <div class="item">Search</div>
+            </div>
+            <div class="content">
+                <textarea></textarea>
+            </div>
+        </div>
+        <div class="window minesweeper windows-box-shadow">
+            <div class="header"><label for="windows-minesweeper-input-on-top">Minesweeper</label>
+                <div class="header-buttons">
+                    <label for="windows-minesweeper-input-min" class="minimize windows-box-shadow"></label>
+                    <label for="windows-minesweeper-input-max" class="maximize windows-box-shadow"></label>
+                    <label for="windows-minesweeper-input" class="close windows-box-shadow">X</label>
+                </div>
+            </div>
+            <div class="options line">
+                <div class="item">Game</div>
+                <div class="item">Help</div>
+            </div>
+            <input type="radio" name="data-id-1-1" id="data-id-1-1" class="group"><input type="radio" name="data-id-2-1" id="data-id-2-1" class="group"><input type="radio" name="data-id-3-1" id="data-id-3-1" class="group"><input type="radio" name="data-id-4-1" id="data-id-4-1" class="group"><input type="radio" name="data-id-5-1" id="data-id-5-1"><input class="mine" type="radio" name="data-id-6-1" id="data-id-6-1"><input type="radio" name="data-id-7-1" id="data-id-7-1"><input type="radio" name="data-id-8-1" id="data-id-8-1">
+            <input type="radio" name="data-id-1-2" id="data-id-1-2"><input type="radio" name="data-id-2-2" id="data-id-2-2"><input type="radio" name="data-id-3-2" id="data-id-3-2"><input type="radio" name="data-id-4-2" id="data-id-4-2"><input type="radio" name="data-id-5-2" id="data-id-5-2"><input type="radio" name="data-id-6-2" id="data-id-6-2"><input type="radio" name="data-id-7-2" id="data-id-7-2"><input type="radio" name="data-id-8-2" id="data-id-8-2">
+            <input type="radio" name="data-id-1-3" id="data-id-1-3"><input type="radio" name="data-id-2-3" id="data-id-2-3"><input type="radio" name="data-id-3-3" id="data-id-3-3"><input type="radio" name="data-id-4-3" id="data-id-4-3"><input type="radio" name="data-id-5-3" id="data-id-5-3"><input type="radio" name="data-id-6-3" id="data-id-6-3"><input type="radio" name="data-id-7-3" id="data-id-7-3"><input type="radio" name="data-id-8-3" id="data-id-8-3">
+            <input type="radio" name="data-id-1-4" id="data-id-1-4"><input type="radio" name="data-id-2-4" id="data-id-2-4"><input class="mine" type="radio" name="data-id-3-4" id="data-id-3-4"><input type="radio" name="data-id-4-4" id="data-id-4-4"><input type="radio" name="data-id-5-4" id="data-id-5-4"><input type="radio" name="data-id-6-4" id="data-id-6-4"><input class="mine" type="radio" name="data-id-7-4" id="data-id-7-4"><input type="radio" name="data-id-8-4" id="data-id-8-4">
+            <input class="mine" type="radio" name="data-id-1-5" id="data-id-1-5"><input type="radio" name="data-id-2-5" id="data-id-2-5"><input type="radio" name="data-id-3-5" id="data-id-3-5"><input type="radio" name="data-id-4-5" id="data-id-4-5"><input type="radio" name="data-id-5-5" id="data-id-5-5"><input type="radio" name="data-id-6-5" id="data-id-6-5"><input type="radio" name="data-id-7-5" id="data-id-7-5"><input type="radio" name="data-id-8-5" id="data-id-8-5">
+            <input type="radio" name="data-id-1-6" id="data-id-1-6"><input type="radio" name="data-id-2-6" id="data-id-2-6"><input type="radio" name="data-id-3-6" id="data-id-3-6"><input type="radio" name="data-id-4-6" id="data-id-4-6"><input class="mine" type="radio" name="data-id-5-6" id="data-id-5-6"><input type="radio" name="data-id-6-6" id="data-id-6-6"><input class="mine" type="radio" name="data-id-7-6" id="data-id-7-6"><input class="mine" type="radio" name="data-id-8-6" id="data-id-8-6">
+            <input type="radio" name="data-id-1-7" id="data-id-1-7"><input type="radio" name="data-id-2-7" id="data-id-2-7"><input type="radio" name="data-id-3-7" id="data-id-3-7"><input type="radio" name="data-id-4-7" id="data-id-4-7"><input type="radio" name="data-id-5-7" id="data-id-5-7"><input type="radio" name="data-id-6-7" id="data-id-6-7"><input type="radio" name="data-id-7-7" id="data-id-7-7"><input class="mine" type="radio" name="data-id-8-7" id="data-id-8-7">
+            <input type="radio" name="data-id-1-8" id="data-id-1-8"><input type="radio" name="data-id-2-8" id="data-id-2-8"><input class="mine" type="radio" name="data-id-3-8" id="data-id-3-8"><input class="mine" type="radio" name="data-id-4-8" id="data-id-4-8"><input type="radio" name="data-id-5-8" id="data-id-5-8"><input type="radio" name="data-id-6-8" id="data-id-6-8"><input type="radio" name="data-id-7-8" id="data-id-7-8"><input type="radio" name="data-id-8-8" id="data-id-8-8">
+    
+            <div class="score">
+                <div class="scoreboard">
+                    <div></div><div></div><div></div><div></div><div></div>
+                    <div></div><div></div><div></div><div></div><div></div><div></div>
+                    <div></div><div></div><div></div><div></div><div></div><div></div>
+                </div>
+                <div class="smiley-face">
+                </div>
+                <div class="scoreboard">
+                    <div></div><div></div><div></div><div></div><div></div>
+                    <div></div><div></div><div></div><div></div><div></div><div></div>
+                    <div></div><div></div><div></div><div></div><div></div><div></div>
+                </div>
+            </div>
+
+            <div class="content">
+                <label for="data-id-1-1" class="minesweeper-block" data-type="empty" data-group="1"></label>
+                <label for="data-id-2-1" class="minesweeper-block" data-type="empty" data-group="1"></label>
+                <label for="data-id-3-1" class="minesweeper-block" data-type="empty" data-group="1"></label>
+                <label for="data-id-4-1" class="minesweeper-block" data-type="empty" data-group="1"></label>
+                <label for="data-id-5-1" class="minesweeper-block" data-type="1">1</label>
+                <label for="data-id-6-1" class="minesweeper-block" data-type="mine"></label>
+                <label for="data-id-7-1" class="minesweeper-block" data-type="1">1</label>
+                <label for="data-id-8-1" class="minesweeper-block end" data-type="empty" data-group="2"></label>
+    
+                <label for="data-id-1-2" class="minesweeper-block" data-type="empty" data-group="1"></label>
+                <label for="data-id-2-2" class="minesweeper-block" data-type="1">1</label>
+                <label for="data-id-3-2" class="minesweeper-block" data-type="1">1</label>
+                <label for="data-id-4-2" class="minesweeper-block" data-type="1">1</label>
+                <label for="data-id-5-2" class="minesweeper-block" data-type="1">1</label>
+                <label for="data-id-6-2" class="minesweeper-block" data-type="2">2</label>
+                <label for="data-id-7-2" class="minesweeper-block" data-type="2">2</label>
+                <label for="data-id-8-2" class="minesweeper-block end" data-type="empty" data-group="2"></label>
+    
+                <label for="data-id-1-4" class="minesweeper-block" data-type="1">1</label>
+                <label for="data-id-2-4" class="minesweeper-block" data-type="2">2</label>
+                <label for="data-id-3-4" class="minesweeper-block" data-type="mine"></label>
+                <label for="data-id-4-4" class="minesweeper-block" data-type="1">1</label>
+                <label for="data-id-5-4" class="minesweeper-block" data-type="empty"></label>
+                <label for="data-id-6-4" class="minesweeper-block" data-type="1">1</label>
+                <label for="data-id-7-4" class="minesweeper-block" data-type="mine"></label>
+                <label for="data-id-8-4" class="minesweeper-block end" data-type="1">1</label>
+    
+                <label for="data-id-1-5" class="minesweeper-block" data-type="mine"></label>
+                <label for="data-id-2-5" class="minesweeper-block" data-type="2">2</label>
+                <label for="data-id-3-5" class="minesweeper-block" data-type="1">1</label>
+                <label for="data-id-4-5" class="minesweeper-block" data-type="2">2</label>
+                <label for="data-id-5-5" class="minesweeper-block" data-type="1">1</label>
+                <label for="data-id-6-5" class="minesweeper-block" data-type="2">2</label>
+                <label for="data-id-7-5" class="minesweeper-block" data-type="3">3</label>
+                <label for="data-id-8-5" class="minesweeper-block end" data-type="3">3</label>
+    
+                <label for="data-id-1-6" class="minesweeper-block" data-type="empty" data-group="3"></label>
+                <label for="data-id-2-6" class="minesweeper-block" data-type="empty" data-group="3"></label>
+                <label for="data-id-3-6" class="minesweeper-block" data-type="empty" data-group="3"></label>
+                <label for="data-id-4-6" class="minesweeper-block" data-type="1">1</label>
+                <label for="data-id-5-6" class="minesweeper-block" data-type="mine"></label>
+                <label for="data-id-6-6" class="minesweeper-block" data-type="1">1</label>
+                <label for="data-id-7-6" class="minesweeper-block" data-type="mine"></label>
+                <label for="data-id-8-6" class="minesweeper-block end" data-type="mine"></label>
+    
+                <label for="data-id-1-7" class="minesweeper-block" data-type="empty" data-group="3"></label>
+                <label for="data-id-2-7" class="minesweeper-block" data-type="1">1</label>
+                <label for="data-id-3-7" class="minesweeper-block" data-type="2">2</label>
+                <label for="data-id-4-7" class="minesweeper-block" data-type="3">3</label>
+                <label for="data-id-5-7" class="minesweeper-block" data-type="2">2</label>
+                <label for="data-id-6-7" class="minesweeper-block" data-type="2">2</label>
+                <label for="data-id-7-7" class="minesweeper-block" data-type="3">3</label>
+                <label for="data-id-8-7" class="minesweeper-block end" data-type="mine"></label>
+    
+                <label for="data-id-1-8" class="minesweeper-block" data-type="empty" data-group="3"></label>
+                <label for="data-id-2-8" class="minesweeper-block" data-type="1" >1</label>
+                <label for="data-id-3-8" class="minesweeper-block" data-type="mine"></label>
+                <label for="data-id-4-8" class="minesweeper-block" data-type="mine"></label>
+                <label for="data-id-5-8" class="minesweeper-block" data-type="1">1</label>
+                <label for="data-id-6-8" class="minesweeper-block" data-type="empty"></label>
+                <label for="data-id-7-8" class="minesweeper-block" data-type="1">1</label>
+                <label for="data-id-8-8" class="minesweeper-block end" data-type="1">1</label>
+            </div>
+        </div>    
+    </div>
+</div>
+    <div id="start-bar">
+        <div id="start-button-items">
+            <label id="start-button" class="windows-box-shadow" for="start-button-input"></label>
+            <div id="items">
+                <label for="windows-ie-input-min" class="ie-tab tab windows-box-shadow"><span><img src="image/internet.png" alt="" /></span><span>Internet Explorer</span></label>
+                <label for="windows-help-input-min" class="help-tab tab windows-box-shadow"><span><img src="image/help.png" alt="" /></span><span>Help Center</span></label>
+                <label for="windows-notepad-input-min" class="notepad-tab tab windows-box-shadow"><span><img src="image/notepad.png" alt="" /></span><span>Notepad</span></label>
+                <label for="windows-documents-input-min" class="documents-tab tab windows-box-shadow"><span><img src="image/document.png" alt="" /></span><span>Documents</span></label>
+                <label for="windows-update-input-min" class="update-tab tab windows-box-shadow"><span><img src="image/windowupdate.png" alt="" /></span><span>Windows Update</span></label>
+                <label for="windows-trash-input-min" class="trash-tab tab windows-box-shadow"><span><img src="image/trash.png" alt="" /></span><span>Recycle Bin</span></label>
+                <label for="windows-minesweeper-input-min" class="minesweeper-tab tab windows-box-shadow"><span><img src="image/minesweeper.png" alt="" /></span><span>Minesweeper</span></label>
+            </div>
+        </div>
+        <div id="start-menu" class="windows-box-shadow">
+            <div id="windows-start-menu-blue">Windows<span>98</span></div>
+            <ul>
+                <li class="line update"><label for="windows-update-input"><img src="image/windowupdate.png" style="width: 1.5rem;" alt="" /> Windows Update</label></li>
+                <li class="programs"><label><img src="data:image/png;base64,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" style="width: 1.5rem;" alt="" /> Progams</label>
+                    <ul class="windows-box-shadow">
+                        <li><label for="windows-ie-input"><img src="image/internet.png" alt="" /><input type="checkbox" /> Internet Explorer</label></li>
+                        <li><label for="windows-minesweeper-input"><img src="image/minesweeper.png" alt="" /> Minesweeper</label></li>
+                        <li><label for="windows-notepad-input"><img src="image/notepad.png" alt="" /> Notepad</label></li>
+                    </ul>
+                </li>
+                <li><label for="windows-documents-input"><img src="image/document.png" style="width: 1.5rem;" alt="" /> Documents</label></li>
+                <li class="line"><label for="windows-help-input"><img src="image/help.png" style="width: 1.5rem;" alt="" /> Help</label></li>
+                <li><label for="login-screen-input"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwBAMAAAClLOS0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAKlBMVEUAAACAgIAAAAD////AwMAAgAAA/wCAAAAAgID/AACAgAD//wAAAP8AAIBZpFh1AAAAAXRSTlMAQObYZgAAAAFiS0dEAxEMTPIAAAAHdElNRQfiBhgXEB4kEQA+AAABHklEQVQ4y92QMU7DMBSGU4/ZEldC6uS8tkKELuAshE6tGUjEUokbIA7QQ3AAhFR1QyZTvLWe8ETVsSyciIRWqtF7J+j/b/792e/9QXCCigR93pETOuAyEzQgaYRncZ9COjJ+nFEIvxo+3xFIM9L85QkwwuXZYjirMMLlxXJ+6QqEcHm+fE0s9HGwWYx+4i5BbGH3nUzxH+P7yW7DiammN9noCwNBV72NHwYYYJDIbYa3CHUUKardj8TkA6UUAq57bq0BAAGrnnE5bjy8XcWpW9d7vfuBTmLj5F75v4CBcQdZ4QcBM648+DhzmH1Caq1VyrbWHlHWpiyLOi1ae09VtpUGplt786Zlo/am+LNXYdXU4d88Is1iggoY0dNp6BfBfGAv3Vb5dgAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAxOC0wNi0yNFQyMzoxNjozMC0wNDowMBlr2tEAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMTgtMDYtMjRUMjM6MTY6MzAtMDQ6MDBoNmJtAAAAAElFTkSuQmCC" style="margin: 0 0.5rem 0 0;" alt="" /> Log Off <span class="spiderman logout-prompt"> Spiderman...</span><span class="chaewon logout-prompt"> chaewon...</span><span class="donald-trump logout-prompt"> Donald Trump...</span></label></li>
+                <li><label for="shutdown-screen-input"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAARVBMVEUAAACGhobAwMB3d3eysrLMzMz4+PjX19eZmZnq6urn59ZNTU2WlpZCQkIzAGYAAIAAAAAzAMwAAP8A/////wBVVVX///99stlUAAAAAXRSTlMAQObYZgAAAAFiS0dEFnzRqBkAAAAHdElNRQfiBhoANBn4/QlFAAAAzUlEQVQ4y83S0Q6DIAwFUGmhYudEdP7/r+6CZEEnvm438emetBDpun+KQW5rQpibtXWOHJHlPedeRHqHQHhm+zXKyKCqMmRhfV53IEb0YUh1EBCIMRH7PIAphEREipgJX71iijER16tAGJ79EShAJrZ3gu4KLMuaCDtqgHVZkwnXAGdYVskzqD3hhRE3IKYV7QkhxHyKBvCDUiKxnsAV2NhrIR9Q9cgGgv8QkAKOfU0KOPeFpGe1g8uHVUgb7MTjAk2QyTjO7T6T2/oHeQPSrw8Qg6bkoQAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAxOC0wNi0yNlQwMDo1MjoyNS0wNDowMOXPqxAAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMTgtMDYtMjZUMDA6NTI6MjUtMDQ6MDCUkhOsAAAAAElFTkSuQmCC" style="margin: 0 0.5rem 0 0;" alt="" /> Shutdown</label></li>
+            </ul>
+        </div>
+        <div id="time-options"></div>
+    </div>
+</form>
+<!-- partial -->
+  
+</body>
+</html>
